@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2">
+    <g data-name="타원 27" style="fill:#fff;stroke:#707070">
+        <circle cx="1" cy="1" r="1" style="stroke:none"/>
+        <circle cx="1" cy="1" r=".5" style="fill:none"/>
+    </g>
+    <g data-name="타원 28" transform="translate(4)" style="fill:#fff;stroke:#707070">
+        <circle cx="1" cy="1" r="1" style="stroke:none"/>
+        <circle cx="1" cy="1" r=".5" style="fill:none"/>
+    </g>
+    <g data-name="타원 29" transform="translate(8)" style="fill:#fff;stroke:#707070">
+        <circle cx="1" cy="1" r="1" style="stroke:none"/>
+        <circle cx="1" cy="1" r=".5" style="fill:none"/>
+    </g>
+</svg>

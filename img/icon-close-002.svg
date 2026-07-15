@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.001" height="12.001" viewBox="0 0 12.001 12.001">
+    <defs>
+        <clipPath id="sweekp16ga">
+            <path data-name="사각형 13126" style="fill:#1a1818" d="M0 0h12.001v12.001H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 25882" style="clip-path:url(#sweekp16ga)">
+        <g data-name="그룹 25881">
+            <g data-name="그룹 25880" style="clip-path:url(#sweekp16ga)">
+                <g data-name="그룹 25879" style="opacity:.97">
+                    <g data-name="그룹 25878">
+                        <g data-name="그룹 25877" style="clip-path:url(#sweekp16ga)">
+                            <path data-name="패스 26141" d="M12 1.311 10.69 0 6 4.689 1.311 0 0 1.311 4.69 6 0 10.69 1.311 12 6 7.311 10.69 12 12 10.69 7.312 6z" style="fill:#1a1818"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <linearGradient id="p01vy52i1a" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#0fe345"/>
+            <stop offset=".497" stop-color="#0faba2"/>
+            <stop offset="1" stop-color="#107ce5"/>
+        </linearGradient>
+        <clipPath id="nhzc5p5c9b">
+            <circle data-name="타원 79" cx="15" cy="15" r="15" style="fill:url(#p01vy52i1a)"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 29694">
+        <g data-name="그룹 29663">
+            <g data-name="그룹 25963">
+                <g data-name="그룹 25960">
+                    <g data-name="그룹 25959" style="clip-path:url(#nhzc5p5c9b)">
+                        <path data-name="패스 26183" d="m0 0 41.346.7.7 41.368-41.346-.7z" transform="rotate(-45.455 10.674 25.526)" style="fill:url(#p01vy52i1a)"/>
+                    </g>
+                </g>
+            </g>
+            <text transform="translate(9.5 21.5)" style="fill:#fff;font-size:18px;font-family:Pretendard-Bold,Pretendard;font-weight:700;letter-spacing:-.02em"><tspan x="0" y="0">P</tspan></text>
+        </g>
+    </g>
+</svg>

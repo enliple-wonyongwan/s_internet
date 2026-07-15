@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/coupang.css">
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+	<script src="../js/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
+
+	<title>포털사이트</title>
+</head>
+
+<body>
+	<div class="wing_wrap">
+		<div class="title_wrap">
+			<div>
+				<h3>최저가알림 서비스</h3>
+
+				<label class="switch">
+					<input type="checkbox" aria-label="토글 On/Off" checked>
+					<span class="slider"></span>
+					<span class="label" aria-hidden="true"></span>
+				</label>
+			</div>
+			<button type="button" class="wing_close_btn">닫기</button>
+		</div>
+
+		<div class="box1">
+			<h4>가격변동 알림</h4>
+
+			<div class="item_wrap">
+				<div class="img_box">
+					<img src="../img/img-thumbnail@3x.png" alt="상품이미지" class="img">
+				</div>
+				<div class="img_cont">
+					<p>SAMMU 게이밍의자 610-B, 다리 받침 대형 SAMMU 게이밍의자 추천 의자 1kg, 1개</p>
+					<div class="add_cont">1KG X 1개</div>
+					<img src="../img/icon-rocket@3x.png" alt="로켓" class="rocket">
+				</div>
+			</div>
+
+			<div class="graph_wrap">
+				<div class="price_wrap">
+					<div>
+						<strong class="sale_price">128,000원</strong>
+						<span class="price">238,000원</span>
+					</div>
+					<strong class="percent up">48%</strong>
+					<!-- <strong class="percent down">48%</strong> -->
+				</div>
+				<div class="graph">
+					<canvas id="priceChart" role="img" aria-label="날짜별 최저가 라인 차트"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<div class="box2">
+			<h4>최저가 알람 등록</h4>
+			<p>입력한 가격에 도달하면 알림으로 알려주는 서비스 입니다.</p>
+			<div class="alram_wrap">
+				<select>
+					<option value="5%">5%</option>
+					<option value="6%">6%</option>
+					<option value="7%">7%</option>
+					<option value="8%">8%</option>
+				</select>
+				<span><strong>128,000원</strong> 도달 시 알람</span>
+			</div>
+		</div>
+
+		<div class="box3">
+			<h4>쇼핑몰별 가격 비교</h4>
+			<ul>
+				<li>
+					<div class="site">
+						<img src="../img/logo-coupang@3x.png" alt="쿠팡 로고" class="coupang_img">
+					</div>
+					<span class="price">135,000원</span>
+				</li>
+				<li>
+					<div class="site">
+						<div class="img_logo"><img src="../img/icon-11@3x.png" alt="11번가 로고" class="img"></div>11번가
+					</div>
+					<span class="price">135,000원</span>
+				</li>
+				<li>
+					<div class="site">
+						<div class="img_logo"><img src="../img/icon-gmarket@3x.png" alt="G마켓 로고" class="img"></div>지마켓
+					</div>
+					<span class="price">135,000원</span>
+				</li>
+				<li>
+					<div class="site">
+						<div class="img_logo"><img src="../img/icon-auction.png" alt="옥션 로고" class="img"></div>옥션
+					</div>
+					<span class="price">135,000원</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="box4">
+			<h4>내 관심 상품</h4>
+			<ul>
+				<li>
+					<button type="button" aria-label="관심 상품 삭제" class="remove_btn"></button>
+					<div class="img_box">
+						<img src="../img/img-thumbnail@3x.png" alt="상품이미지" class="img">
+					</div>
+					<img src="../img/icon-rocket@3x.png" alt="로켓" class="rocket">
+					<p>SAMMU 게이밍의자 610 -B, 다리받침대형</p>
+					<strong class="price">128,000원</strong>
+				</li>
+				<li>
+					<button type="button" aria-label="관심 상품 삭제" class="remove_btn"></button>
+					<div class="img_box">
+						<img src="../img/img-thumbnail@3x.png" alt="상품이미지" class="img">
+					</div>
+					<img src="../img/icon-merchant-rocket@3x.png" alt="판매자로켓" class="rocket">
+					<p>SAMMU 게이밍의자 610 -B, 다리받침대형</p>
+					<strong class="price">128,000원</strong>
+				</li>
+				<li>
+					<button type="button" aria-label="관심 상품 삭제" class="remove_btn"></button>
+					<div class="img_box">
+						<img src="../img/img-thumbnail@3x.png" alt="상품이미지" class="img">
+					</div>
+					<img src="../img/icon-rocketfresh@3x.png" alt="로켓프레시" class="rocket">
+					<p>SAMMU 게이밍의자 610 -B, 다리받침대형</p>
+					<strong class="price">128,000원</strong>
+				</li>
+				<li>
+					<button type="button" aria-label="관심 상품 삭제" class="remove_btn"></button>
+					<div class="img_box">
+						<img src="../img/img-thumbnail@3x.png" alt="상품이미지" class="img">
+					</div>
+					<img src="../img/icon-rocket@3x.png" alt="로켓" class="rocket">
+					<p>SAMMU 게이밍의자 610 -B, 다리받침대형</p>
+					<strong class="price">128,000원</strong>
+				</li>
+				<li>
+					<button type="button" aria-label="관심 상품 삭제" class="remove_btn"></button>
+					<div class="img_box">
+						<img src="../img/img-thumbnail@3x.png" alt="상품이미지" class="img">
+					</div>
+					<img src="../img/icon-merchant-rocket@3x.png" alt="판매자로켓" class="rocket">
+					<p>SAMMU 게이밍의자 610 -B, 다리받침대형</p>
+					<strong class="price">128,000원</strong>
+				</li>
+				<li>
+					<button type="button" aria-label="관심 상품 삭제" class="remove_btn"></button>
+					<div class="img_box">
+						<img src="../img/img-thumbnail@3x.png" alt="상품이미지" class="img">
+					</div>
+					<img src="../img/icon-rocketfresh@3x.png" alt="로켓프레시" class="rocket">
+					<p>SAMMU 게이밍의자 610 -B, 다리받침대형</p>
+					<strong class="price">128,000원</strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="alram_modal">
+		<button type="button" aria-label="닫기" class="alram_close_btn"></button>
+		<div class="alram_modal_title">
+			<div class="logo_img"><img src="../img/icon-coupang@3x.png" alt="쿠팡로고" class="img"></div>쿠팡 할인 알림
+		</div>
+		<p>SAMMU 게이밍의자 610-BAMMU 게이밍의자 610-BAMMU 게이밍의자 610-B</p>
+		<span class="change">외 <strong>5개 상품</strong>의 가격이 변동 되었습니다.</span>
+	</div>
+
+<script>
+		const labels = ['01.08', '02.08', '03.08', '04.08', '05.08', '06.08', '07.08', '08.08'];
+		const highData = [128000, 130000, 125000, 140000, 135000, 145000, 138000, 142000];
+		const lowData = [106000, 108000, 105000, 120000, 112000, 118000, 108000, 115000];
+
+		const ctx = document.getElementById('priceChart').getContext('2d');
+		new Chart(ctx, {
+  	type: 'line',
+  	data: {
+    labels,
+    datasets: [
+      {
+        label: '최저가',
+        data: lowData,
+        borderColor: 'rgba(160,170,210,0.85)',
+        backgroundColor: 'transparent',
+        pointBackgroundColor: 'rgba(160,170,210,0.6)',
+        pointBorderColor: 'transparent',
+        pointRadius: 3,
+        pointHoverRadius: 6,
+        pointHoverBackgroundColor: '#5b8fff',
+        pointHoverBorderColor: 'rgba(91,143,255,0.3)',
+        pointHoverBorderWidth: 4,
+        borderWidth: 1.5,
+        tension: 0,
+      },
+      {
+        label: '최고가',
+        data: highData,
+        borderColor: 'transparent',
+        backgroundColor: 'transparent',
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        borderWidth: 0,
+        tension: 0,
+      }
+    ]
+  },
+  options: {
+    responsive: false,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    layout: { padding: { top: 2, bottom: 0, left: 0, right: 0 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        enabled: false,
+        external: function(context) {
+          let tooltipEl = document.getElementById('chartTooltip');
+          if (!tooltipEl) {
+            tooltipEl = document.createElement('div');
+            tooltipEl.id = 'chartTooltip';
+            tooltipEl.style.cssText = `
+              position: absolute; pointer-events: none;
+              background-color: rgba(0,0,0,0.7); border-radius: 8px;
+              width: 120px; height: 70px;
+              padding: 9px 8px; box-sizing: border-box;
+              font-size: 9px; line-height: 1.7;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+              overflow: hidden;
+            `;
+            document.getElementById('priceChart').parentNode.style.position = 'relative';
+            document.getElementById('priceChart').parentNode.appendChild(tooltipEl);
+          }
+
+          const tooltip = context.tooltip;
+          if (tooltip.opacity === 0) { tooltipEl.style.opacity = '0'; return; }
+
+          const idx = tooltip.dataPoints?.[0]?.dataIndex;
+          const high = highData[idx];
+          const low = lowData[idx];
+          const label = labels[idx];
+
+          tooltipEl.innerHTML = `
+            <div style="color:#fff; font-weight:500; text-align:center; padding-bottom:3px; margin-bottom:3px; border-bottom:1px solid rgba(255,255,255,0.2);">${label}</div>
+            <div style="display:flex; justify-content:space-between; color:#fff;">
+              <span>최고가</span><span style="color:#ff5c5c; font-weight:600;">${high.toLocaleString()}원</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; color:#fff;">
+              <span>최저가</span><span style="color:#5b9eff; font-weight:600;">${low.toLocaleString()}원</span>
+            </div>
+          `;
+
+          const canvasParent = context.chart.canvas.parentNode;
+          let left = tooltip.caretX + 10;
+          if (left + 120 > canvasParent.offsetWidth) left = tooltip.caretX - 130;
+          let top = tooltip.caretY - 75;
+          if (top < 0) top = 0;
+
+          tooltipEl.style.opacity = '1';
+          tooltipEl.style.left = left + 'px';
+          tooltipEl.style.top = top + 'px';
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        border: { display: false },
+        ticks: { font: { size: 11 }, color: '#aaa', autoSkip: false, maxRotation: 0, padding: 0 }
+      },
+      y: { display: false, suggestedMin: 70000, suggestedMax: 190000 }
+    }
+  }
+});
+</script>
+</body>
+
+</html>

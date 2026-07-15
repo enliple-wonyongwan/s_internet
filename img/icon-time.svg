@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <clipPath id="xvooe3adra">
+            <path data-name="사각형 36" transform="translate(-.286 -.286)" style="fill:#c9c9c9" d="M0 0h14v14H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-597 -613)">
+        <circle data-name="타원 1" cx="12" cy="12" r="12" transform="translate(597 613)" style="fill:#f9f9f9"/>
+        <g data-name="icon_time" transform="translate(602.286 618.286)" style="clip-path:url(#xvooe3adra)">
+            <path data-name="패스 9" d="M6.721 13.443a6.721 6.721 0 1 1 6.721-6.721 6.729 6.729 0 0 1-6.721 6.721m0-12.109a5.388 5.388 0 1 0 5.388 5.388 5.394 5.394 0 0 0-5.388-5.389" transform="translate(-.007 -.007)" style="fill:#c9c9c9"/>
+            <path data-name="패스 10" d="M113.332 43.388a.664.664 0 0 1-.283-.063l-3.666-1.725A.667.667 0 0 1 109 41v-4.333a.667.667 0 1 1 1.333 0v3.909l3.283 1.542a.667.667 0 0 1-.284 1.27" transform="translate(-102.952 -34.007)" style="fill:#c9c9c9"/>
+        </g>
+    </g>
+</svg>
