@@ -272,6 +272,97 @@ body {
         }
       }
     }
+
+    .hedaer-popup {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      background-color: #fff;
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      padding: 20px;
+      top: calc(100% + 30px);
+      left: 50%;
+      transform: translateX(-50%);
+
+      &.is-active {
+        pointer-events: auto;
+        opacity: 1;
+      }
+
+      &__icon {
+        display: inline-block;
+
+        &--point-white-in-black {
+          vertical-align: -1px;
+          width: 16px;
+          height: 16px;
+          background: url(../img/ic-point-white-in-black.png) no-repeat center / contain;
+        }
+      }
+
+      &__header {
+        margin-bottom: 20px;
+      }
+
+      &__title {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: -0.36px;
+        color: #000;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      &__desc {
+        text-align: center;
+        font-size: 16px;
+        line-height: 21px;
+        color: #000;
+        letter-spacing: -0.32px;
+      }
+
+      &__accent {
+        font-weight: 600;
+
+        &--green {
+          color: #0fd065;
+        }
+      }
+
+      &__btn {
+        margin-top: 20px;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.32px;
+        border-radius: 100px;
+        text-align: center;
+        line-height: 40px;
+        width: 100%;
+
+        &--green {
+          background-color: #0fd065;
+        }
+      }
+
+      &__close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 12px;
+        height: 12px;
+
+        .icon {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: url(../img/icon-close2.svg) no-repeat center;
+        }
+      }
+    }
   }
 
   /* 구글 */
@@ -1919,7 +2010,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(../img/icon-coin-01.png);
+  background-image: url(../img/ic-coin.png);
   display: flex;
   align-items: center;
   justify-content: center;

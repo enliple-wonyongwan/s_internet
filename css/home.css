@@ -11,6 +11,37 @@
   background: var(--bg-url) no-repeat center/cover;
   z-index: 1;
 }
+.wrap .point__g {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  padding: 2px 5px 2px 22px;
+  background-color: #0fd065;
+  border-radius: 200px;
+}
+.wrap .point__g::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url(../img/ic-npay-green-in-black.png) no-repeat center/contain;
+}
+.wrap .point__g--size-l {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 3px 6px 2px 26px;
+}
+.wrap .point__g--size-l::before {
+  width: 20px;
+  height: 20px;
+}
 .wrap .header_mask {
   position: fixed;
   top: 0;
@@ -180,6 +211,11 @@
 .wrap .content_area .card .card_img img {
   height: 100%;
   object-fit: cover;
+}
+.wrap .content_area .card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .wrap .content_area .card.card1 {
   cursor: pointer;
@@ -709,6 +745,11 @@
   background-color: #00a8ff;
   padding: 13px 9px 11px;
 }
+.wrap .content_area .card.card7 .point__g {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
 .wrap .content_area .card.card7::before {
   content: "";
   position: absolute;
@@ -725,9 +766,9 @@
 }
 .wrap .content_area .card.card7 .position_wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  gap: 20px;
   color: #fff;
 }
 .wrap .content_area .card.card7 .position_wrap .area {
@@ -864,7 +905,7 @@
   margin-top: 10px;
 }
 .wrap .content_area .card.card8 {
-  padding: 14px 6px 7px;
+  padding: 6px 6px 7px;
 }
 .wrap .content_area .card.card8 h3 {
   font-size: 13px;
@@ -1922,6 +1963,13 @@
   height: 14px;
   background: url("../img/icon-coin-1.svg") no-repeat center/contain;
   margin-right: 4px;
+}
+.wrap .swiper-slide .point__g {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 .wrap .swiper-slide .label {
   position: absolute;

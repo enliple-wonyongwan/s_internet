@@ -10,6 +10,43 @@
     z-index: 1;
   }
 
+  .point {
+    &__g {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000;
+      display: inline-block;
+      position: relative;
+      padding: 2px 5px 2px 22px;
+      background-color: #0fd065;
+      border-radius: 200px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background: url(../img/ic-npay-green-in-black.png) no-repeat center/contain;
+      }
+
+      &--size-l {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 3px 6px 2px 26px;
+
+        &::before {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
   .header_mask {
     position: fixed;
     top: 0;
@@ -199,6 +236,12 @@
           height: 100%;
           object-fit: cover;
         }
+      }
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       &.card1 {
@@ -809,6 +852,14 @@
         background-color: #00a8ff;
         padding: 13px 9px 11px;
 
+        .point {
+          &__g {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+          }
+        }
+
         &::before {
           content: '';
           position: absolute;
@@ -827,9 +878,9 @@
 
         .position_wrap {
           display: flex;
-          justify-content: space-between;
           align-items: center;
           font-size: 12px;
+          gap: 20px;
           color: #fff;
 
           .area {
@@ -998,7 +1049,7 @@
       }
 
       &.card8 {
-        padding: 14px 6px 7px;
+        padding: 6px 6px 7px;
 
         h3 {
           font-size: 13px;
@@ -2300,6 +2351,14 @@
           background: url('../img/icon-coin-1.svg') no-repeat center/contain;
           margin-right: 4px;
         }
+      }
+
+      &__g {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
       }
     }
 

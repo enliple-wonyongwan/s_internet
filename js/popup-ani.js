@@ -2,12 +2,12 @@ const $canvasStage = document.querySelector('#t_pop_canvas-stage');
 if ($canvasStage) popupAni();
 
 function popupAni() {
-  console.log('sadsa');
   const stage = document.getElementById('t_pop_canvas-stage');
   const jar = document.getElementById('pointJar');
   const pointEl = document.getElementById('pointValue');
   let points = 1230;
   let speed = 1;
+  const canvasStageFlySpeed = Number($canvasStage.dataset.fly);
 
   document.querySelectorAll('input[name="spd"]').forEach((r) => {
     r.addEventListener('change', (e) => {
@@ -17,6 +17,9 @@ function popupAni() {
 
   // 타이밍 (ms) — CSS 변수와 동기화
   const T = { pop: 400, hold: 900, morph: 950, fly: 900 };
+  if (canvasStageFlySpeed) {
+    T.fly = canvasStageFlySpeed;
+  }
   const t = (k) => T[k] / speed;
 
   function setSpeedVars() {
