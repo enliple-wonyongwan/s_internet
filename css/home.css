@@ -1970,6 +1970,30 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  background: linear-gradient(90deg, #0fd065 0%, #0fd065 25%, #c8ffe1 50%, #0fd065 75%, #0fd065 100%);
+  background-size: 200% 100%; /* 크기를 더 키워주어야 이동 거리가 확보됩니다 */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 14px rgba(250, 204, 21, 0.18);
+  animation: proudShine 2.8s linear infinite;
+}
+@keyframes proudShine {
+  0% {
+    background-position: 200% 0;
+    filter: brightness(1);
+  }
+  45% {
+    filter: brightness(1.02);
+  }
+  50% {
+    background-position: 120% 0;
+    filter: brightness(1.18);
+  }
+  55% {
+    filter: brightness(1.02);
+  }
+  100% {
+    background-position: -20% 0;
+    filter: brightness(1);
+  }
 }
 .wrap .swiper-slide .label {
   position: absolute;
