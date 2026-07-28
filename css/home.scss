@@ -2370,21 +2370,12 @@
         @keyframes proudShine {
           0% {
             background-position: 200% 0;
-            filter: brightness(1);
-          }
-          45% {
-            filter: brightness(1.02);
           }
           50% {
             background-position: 120% 0;
-            filter: brightness(1.18);
-          }
-          55% {
-            filter: brightness(1.02);
           }
           100% {
             background-position: -20% 0;
-            filter: brightness(1);
           }
         }
       }
