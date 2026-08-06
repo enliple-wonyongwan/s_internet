@@ -67,6 +67,12 @@
     }
   }
 
+  .header {
+    &__user {
+      position: relative;
+    }
+  }
+
   .main_bg::before,
   .header_mask::before {
     content: '';
@@ -2375,7 +2381,7 @@
             background-position: 120% 0;
           }
           100% {
-            background-position: -20% 0;
+            background-position: 0% 0;
           }
         }
       }

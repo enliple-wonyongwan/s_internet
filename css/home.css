@@ -60,6 +60,9 @@
   opacity: 1;
   display: block;
 }
+.wrap .header__user {
+  position: relative;
+}
 .wrap .main_bg::before,
 .wrap .header_mask::before {
   content: "";
@@ -1983,7 +1986,7 @@
     background-position: 120% 0;
   }
   100% {
-    background-position: -20% 0;
+    background-position: 0% 0;
   }
 }
 .wrap .swiper-slide .label {

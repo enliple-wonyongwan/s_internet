@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-page</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/my-page.css" />
+    <script src="../js/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap wrap--my-page">
+      <header class="header">
+        <div class="header__container">
+          <a class="my-page__btn my-page__btn--home" href="javascript:void(0)"></a>
+          <div class="box">
+            <div class="header__user">
+              <button type="button" class="user_btn"><span class="icon icon--user-default"></span>user1234</button>
+              <div class="header__btn-list header__btn-list--user">
+                <button class="header__btn header__btn--user" type="button"><span class="icon"></span>마이페이지</button>
+                <button class="header__btn header__btn--logout" type="button"><span class="icon"></span>로그아웃</button>
+              </div>
+            </div>
+            <button type="button" class="point_btn bounce" id="pointJar">
+              <span class="icon icon--point"></span>
+              <span class="point-value tick" id="pointValue">1,231</span>
+            </button>
+            <button type="button" class="more_btn" aria-label="더보기 버튼"></button>
+            <button type="button" class="setting_btn" aria-label="설정 버튼"></button>
+
+            <div class="setting_modal google">
+              <ul>
+                <li>
+                  <a href="#" class="setting_1"><span>뉴스</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_2"><span>Meet</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_3"><span>지도</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_4"><span>YouTube</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_5"><span>Play</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_6"><span>Gmail</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_7"><span>주소록</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_8"><span>드라이브</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_9"><span>Calendar</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_10"><span>번역</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_11"><span>사진</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_12"><span>쇼핑</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_13"><span>검색</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_14"><span>뉴스</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_15"><span>Gemini</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_16"><span>채팅</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_17"><span>내 광고 센터</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_18"><span>Docs</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_19"><span>도서</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_20"><span>Blogger</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_21"><span>비즈니스 프로필</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_22"><span>Keep</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_23"><span>클래스룸</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_24"><span>어스</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_25"><span>저장됨</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_26"><span>금융</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_27"><span>Slides</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_28"><span>아트 앤 컬쳐</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_29"><span>Google Ads</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_30"><span>Merchant Center</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_31"><span>Google One</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_32"><span>여행</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_33"><span>Forms</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_34"><span>스토어</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_35"><span>chrome 웹 스토어</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_36"><span>비밀번호 관리자</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_37"><span>Google 애널리스틱</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_38"><span>Sheets</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_39"><span>YouTobe Music</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_40"><span>Wallet</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_41"><span>Notebook LM</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_42"><span>할 일 목록</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="setting_modal naver">
+              <ul>
+                <li>
+                  <a href="#" class="setting_1"><span>메일</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_2"><span>카페</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_3"><span>블로그</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_4"><span>스토어</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_5"><span>뉴스</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_6"><span>증권</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_7"><span>지도</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_8"><span>웹툰</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_9"><span>치지직</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_10"><span>MY BOX</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_11"><span>캘린더</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_12"><span>시리즈</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_13"><span>날씨</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_14"><span>네이버페이</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_15"><span>네이버TV</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_16"><span>도서</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_17"><span>벤드</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_18"><span>사전</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_19"><span>쇼핑라이브</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_20"><span>스포츠</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_21"><span>웹소설</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_22"><span>해피빈</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_23"><span>VIBE</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_24"><span>부동산</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_25"><span>지식in</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="setting_modal daum">
+              <ul>
+                <li>
+                  <a href="#" class="setting_1"><span>지도</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_2"><span>금융</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_3"><span>메일</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_4"><span>스포츠</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_5"><span>카페</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_6"><span>게임</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_7"><span>웹툰</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_8"><span>쇼핑</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_9"><span>뉴스</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_10"><span>톡클라우드</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_11"><span>선물하기</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_12"><span>멜론</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_13"><span>연예</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_14"><span>날씨</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_15"><span>사전</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_16"><span>테이블</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_17"><span>브런치스토리</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_18"><span>티스토리</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_19"><span>카카오스토리</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_20"><span>톡딜</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_21"><span>메이커스</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_22"><span>같이가치</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_23"><span>톡캘린더</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_24"><span>이모티콘</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_25"><span>프렌즈</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_26"><span>카카오TV</span></a>
+                </li>
+                <li>
+                  <a href="#" class="setting_27"><span>카카오 비즈니스</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="my-page__contents">
+        <aside class="my-page__sidebar">
+          <h2 class="my-page__sidebar-title">마이페이지</h2>
+          <div class="my-page__sidebar-tab">
+            <button class="my-page__sidebar-btn my-page__sidebar-btn--profile is-active" type="button"><span class="icon"></span>프로필</button>
+            <button class="my-page__sidebar-btn" type="button"><span class="icon"></span>내 활동</button>
+          </div>
+        </aside>
+        <div class="my-page__main">
+          <h3 class="my-page__main-title">프로필</h3>
+          <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
+          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
+            <div class="my-page__card">
+              <p class="my-page__field-label">등록 이메일</p>
+              <div class="my-page__field">
+                <input class="my-page__input" value="genie************" readonly />
+              </div>
+            </div>
+            <div class="my-page__card">
+              <p class="my-page__field-label">닉네임</p>
+              <div class="my-page__empty-name">
+                <p class="my-page__empty-name-title">아직 닉네임을 설정하지 않았어요</p>
+                <p class="my-page__empty-name-message">에스인터넷 뉴스 댓글 활동이나 나를 나타니는 활동에 들어가는 닉네임을 설정해 주세요</p>
+                <button class="my-page__btn my-page__btn--default" type="button">닉네임 설정하기</button>
+              </div>
+            </div>
+          </div>
+          <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
+          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
+            <div class="my-page__card">
+              <p class="my-page__field-label">등록 이메일</p>
+              <div class="my-page__field">
+                <input class="my-page__input" value="genie************" readonly />
+              </div>
+            </div>
+            <div class="my-page__card">
+              <p class="my-page__field-label">닉네임</p>
+              <div class="my-page__field">
+                <input class="my-page__input" />
+                <button class="my-page__btn my-page__btn--default" type="button">닉네임 변경하기</button>
+              </div>
+            </div>
+          </div>
+          <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
+          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
+            <div class="my-page__card">
+              <p class="my-page__field-label">등록 이메일</p>
+              <div class="my-page__field">
+                <input class="my-page__input" value="genie************" readonly />
+              </div>
+            </div>
+            <div class="my-page__card">
+              <p class="my-page__field-label">닉네임</p>
+              <div class="my-page__setting-name">
+                <div class="my-page__field my-page__field--variant-1">
+                  <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
+                  <span class="my-page__input-count">0/10</span>
+                </div>
+                <div class="my-page__field-message">한글, 영문, 숫자로 2~10자 이내로 입력해주세요</div>
+                <button class="my-page__btn my-page__btn--default">닉네임 설정하기</button>
+                <button class="my-page__btn my-page__btn--default" disabled>닉네임 설정하기</button>
+              </div>
+            </div>
+          </div>
+          <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
+          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
+            <div class="my-page__card">
+              <p class="my-page__field-label">등록 이메일</p>
+              <div class="my-page__field">
+                <input class="my-page__input" />
+                <button class="my-page__btn my-page__btn--default" type="button">원페이에서 확인하기</button>
+              </div>
+            </div>
+            <div class="my-page__card">
+              <p class="my-page__field-label">닉네임</p>
+              <div class="my-page__field">
+                <input class="my-page__input" />
+                <button class="my-page__btn my-page__btn--default" type="button" disabled>닉네임 변경하기</button>
+              </div>
+              <p class="my-page__card-message my-page__card-message--variant-1">닉네임은 30일에 한 번 변경할 수 있어요</p>
+              <p class="my-page__card-message my-page__card-message--variant-2">다음 변경 가능일 : 2026.08.29</p>
+            </div>
+          </div>
+          <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
+          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
+            <div class="my-page__card">
+              <p class="my-page__field-label">등록 이메일</p>
+              <div class="my-page__field">
+                <input class="my-page__input" value="genie************" readonly />
+              </div>
+            </div>
+            <div class="my-page__card">
+              <p class="my-page__field-label">닉네임</p>
+              <div class="my-page__setting-name">
+                <div class="my-page__field my-page__field--variant-1">
+                  <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
+                  <span class="my-page__input-count">0/10</span>
+                </div>
+                <div class="my-page__field-message">한글, 영문, 숫자로 2~10자 이내로 입력해주세요</div>
+                <div class="my-page__card-btn-wrap">
+                  <button class="my-page__btn my-page__btn--variant-2">취소</button>
+                  <button class="my-page__btn my-page__btn--variant-1">저장</button>
+                </div>
+              </div>
+            </div>
+            <div class="my-page__card">
+              <div class="my-page__setting-name my-page__setting-name--warning">
+                <div class="my-page__field my-page__field--variant-1">
+                  <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
+                  <span class="my-page__input-count">0/10</span>
+                </div>
+                <div class="my-page__field-message">지금 사용 중인 닉네임과 같아요</div>
+                <div class="my-page__card-btn-wrap">
+                  <button class="my-page__btn my-page__btn--variant-2">취소</button>
+                  <button class="my-page__btn my-page__btn--variant-1">저장</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="my-page__main-title">내활동</h3>
+          <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
+          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
+            <p class="my-page__main-contetnt-title my-page__main-contetnt-title--comment">내가 작성한 댓글<span class="my-page__count">37개</span></p>
+            <div class="my-page__card my-page__card--comments">
+              <p class="my-page__comment-date">2026.07.30</p>
+              <div class="my-page__comments">
+                <div class="my-page__comment-item">
+                  <div class="my-page__comment-info">
+                    <div class="my-page__comment-article">이정후가 치면 안타다…'17경기 연속 안타' 韓빅리거 새 역사쓰다</div>
+                    <div class="my-page__comment">이 정도면 진짜 역대급이다... 다음 경기도 기대됨</div>
+                    <div class="my-page__comment-meta">
+                      <span class="my-page__time">21:04</span>
+                      <button class="my-page__like" type="button"><span class="icon"></span>0</button>
+                      <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
+                    </div>
+                  </div>
+                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                </div>
+                <div class="my-page__comment-item">
+                  <div class="my-page__comment-info">
+                    <div class="my-page__comment-article">이정후가 치면 안타다…'17경기 연속 안타' 韓빅리거 새 역사쓰다</div>
+                    <div class="my-page__comment">이 정도면 진짜 역대급이다... 다음 경기도 기대됨</div>
+                    <div class="my-page__comment-meta">
+                      <span class="my-page__time">21:04</span>
+                      <button class="my-page__like" type="button"><span class="icon"></span>0</button>
+                      <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
+                    </div>
+                  </div>
+                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                </div>
+                <div class="my-page__comment-item">
+                  <div class="my-page__comment-info">
+                    <div class="my-page__comment-article">이정후가 치면 안타다…'17경기 연속 안타' 韓빅리거 새 역사쓰다</div>
+                    <div class="my-page__comment-reply">
+                      <span class="my-page__reply-user">s45612345님 댓글에 대한 답글:</span>
+                      <span class="my-page__reply-message">미쳤다. 계획범죄 맞고 이건 공범 관계도 봐야함</span>
+                    </div>
+                    <div class="my-page__comment">이 정도면 진짜 역대급이다... 다음 경기도 기대됨</div>
+                    <div class="my-page__comment-meta">
+                      <span class="my-page__time">21:04</span>
+                      <button class="my-page__like" type="button"><span class="icon"></span>0</button>
+                      <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
+                    </div>
+                  </div>
+                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                </div>
+              </div>
+              <p class="my-page__comment-date">2026.07.30</p>
+              <div class="my-page__comments">
+                <div class="my-page__comment-item">
+                  <div class="my-page__comment-info">
+                    <div class="my-page__comment-article">이정후가 치면 안타다…'17경기 연속 안타' 韓빅리거 새 역사쓰다</div>
+                    <div class="my-page__comment">이 정도면 진짜 역대급이다... 다음 경기도 기대됨</div>
+                    <div class="my-page__comment-meta">
+                      <span class="my-page__time">21:04</span>
+                      <button class="my-page__like" type="button"><span class="icon"></span>0</button>
+                      <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
+                    </div>
+                  </div>
+                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                </div>
+                <div class="my-page__comment-item">
+                  <div class="my-page__comment-info">
+                    <div class="my-page__comment-article">이정후가 치면 안타다…'17경기 연속 안타' 韓빅리거 새 역사쓰다</div>
+                    <div class="my-page__comment">이 정도면 진짜 역대급이다... 다음 경기도 기대됨</div>
+                    <div class="my-page__comment-meta">
+                      <span class="my-page__time">21:04</span>
+                      <button class="my-page__like" type="button"><span class="icon"></span>0</button>
+                      <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
+                    </div>
+                  </div>
+                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                </div>
+                <div class="my-page__comment-item">
+                  <div class="my-page__comment-info">
+                    <div class="my-page__comment-article">이정후가 치면 안타다…'17경기 연속 안타' 韓빅리거 새 역사쓰다</div>
+                    <div class="my-page__comment-reply">
+                      <span class="my-page__reply-user">s45612345님 댓글에 대한 답글:</span>
+                      <span class="my-page__reply-message">미쳤다. 계획범죄 맞고 이건 공범 관계도 봐야함</span>
+                    </div>
+                    <div class="my-page__comment">이 정도면 진짜 역대급이다... 다음 경기도 기대됨</div>
+                    <div class="my-page__comment-meta">
+                      <span class="my-page__time">21:04</span>
+                      <button class="my-page__like" type="button"><span class="icon"></span>0</button>
+                      <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
+                    </div>
+                  </div>
+                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-page__main-contetnt my-page__main-contetnt--not-comment">
+            <div class="my-page__not-comment-text-wrap">
+              <p class="my-page__not-comment-text-title">아직 작성한 댓글이 없어요</p>
+              <p class="my-page__not-comment-text-desc">에스인터넷 뉴스에 댓글을 남기고 포인트도 받아보세요</p>
+            </div>
+            <button class="my-page__btn my-page__btn--default" type="button">뉴스 보러 가기</button>
+            <div class="my-page__news-list">
+              <p class="my-page__news-list-title"><span class="icon"></span>지금 댓글이 활발한 뉴스</p>
+              <ul class="news-grid">
+                <li class="news-card">
+                  <a class="news-card__link" href="javascript:void(0)">
+                    <img class="news-card__thumb" src="../img/news-img-3.png" alt="News Image" />
+                    <h2 class="news-card__title">[단독]중앙선관위 ‘투표용지 인쇄 감축’ 회의 한번 없었다. 논란</h2>
+                  </a>
+                </li>
+                <li class="news-card">
+                  <a class="news-card__link" href="javascript:void(0)">
+                    <img class="news-card__thumb" src="../img/news-img-3.png" alt="News Image" />
+                    <h2 class="news-card__title">[단독]중앙선관위 ‘투표용지 인쇄 감축’ 회의 한번 없었다. 논란</h2>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/common.js"></script>
+  </body>
+</html>
