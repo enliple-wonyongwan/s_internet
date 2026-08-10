@@ -63,13 +63,13 @@
 
         &--user {
           .icon {
-            background: url(../img/ico_user.png) no-repeat center/contain;
+            background: url(../img/ico_user.svg) no-repeat center/contain;
           }
         }
 
         &--logout {
           .icon {
-            background: url(../img/ico_logout.png) no-repeat center/contain;
+            background: url(../img/ico_logout.svg) no-repeat center/contain;
           }
         }
       }
@@ -140,7 +140,7 @@
     .icon {
       width: 16px;
       height: 16px;
-      background: url(../img/ico_user.png) no-repeat center/contain;
+      background: url(../img/ico_user.svg) no-repeat center/contain;
     }
 
     &--profile {

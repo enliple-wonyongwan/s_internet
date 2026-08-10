@@ -46,10 +46,10 @@
   height: 16px;
 }
 .wrap--my-page .header__btn--user .icon {
-  background: url(../img/ico_user.png) no-repeat center/contain;
+  background: url(../img/ico_user.svg) no-repeat center/contain;
 }
 .wrap--my-page .header__btn--logout .icon {
-  background: url(../img/ico_logout.png) no-repeat center/contain;
+  background: url(../img/ico_logout.svg) no-repeat center/contain;
 }
 .wrap--my-page .header .box {
   position: relative;
@@ -104,7 +104,7 @@
 .my-page__sidebar-btn .icon {
   width: 16px;
   height: 16px;
-  background: url(../img/ico_user.png) no-repeat center/contain;
+  background: url(../img/ico_user.svg) no-repeat center/contain;
 }
 .my-page__sidebar-btn--profile .icon {
   background: url(../img/ico_my.png) no-repeat center/contain;
