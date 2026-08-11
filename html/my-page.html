@@ -331,10 +331,9 @@
       </header>
       <div class="my-page__contents">
         <aside class="my-page__sidebar">
-          <h2 class="my-page__sidebar-title">마이페이지</h2>
           <div class="my-page__sidebar-tab">
-            <button class="my-page__sidebar-btn my-page__sidebar-btn--profile is-active" type="button"><span class="icon"></span>프로필</button>
-            <button class="my-page__sidebar-btn" type="button"><span class="icon"></span>내 활동</button>
+            <button class="my-page__sidebar-btn is-active" type="button"><span class="icon"></span>프로필</button>
+            <button class="my-page__sidebar-btn my-page__sidebar-btn--act" type="button"><span class="icon"></span>내 활동</button>
           </div>
         </aside>
         <div class="my-page__main">
@@ -357,6 +356,33 @@
             </div>
           </div>
           <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
+          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
+            <div class="my-page__card">
+              <p class="my-page__field-label">등록 이메일</p>
+              <div class="my-page__field">
+                <input class="my-page__input" value="genie************" readonly />
+              </div>
+            </div>
+            <div class="my-page__card">
+              <p class="my-page__field-label">닉네임</p>
+              <div class="my-page__setting-name" style="margin-bottom: 20px">
+                <div class="my-page__field my-page__field--variant-1">
+                  <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
+                  <span class="my-page__input-count"><span class="my-page__input-count-num">0</span>/10</span>
+                </div>
+                <div class="my-page__field-message">한글, 영문, 숫자로 2~10자 이내로 입력해주세요</div>
+                <button class="my-page__btn my-page__btn--default">닉네임 설정하기</button>
+              </div>
+              <div class="my-page__setting-name my-page__setting-name--warning">
+                <div class="my-page__field my-page__field--variant-1">
+                  <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
+                  <span class="my-page__input-count"><span class="my-page__input-count-num">0</span>/10</span>
+                </div>
+                <div class="my-page__field-message">한글, 영문, 숫자만 사용할 수 있어요</div>
+                <button class="my-page__btn my-page__btn--default" disabled>닉네임 설정하기</button>
+              </div>
+            </div>
+          </div>
           <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
           <div class="my-page__main-contetnt" style="margin-bottom: 20px">
             <div class="my-page__card">
@@ -379,27 +405,6 @@
               <p class="my-page__field-label">등록 이메일</p>
               <div class="my-page__field">
                 <input class="my-page__input" value="genie************" readonly />
-              </div>
-            </div>
-            <div class="my-page__card">
-              <p class="my-page__field-label">닉네임</p>
-              <div class="my-page__setting-name">
-                <div class="my-page__field my-page__field--variant-1">
-                  <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
-                  <span class="my-page__input-count">0/10</span>
-                </div>
-                <div class="my-page__field-message">한글, 영문, 숫자로 2~10자 이내로 입력해주세요</div>
-                <button class="my-page__btn my-page__btn--default">닉네임 설정하기</button>
-                <button class="my-page__btn my-page__btn--default" disabled>닉네임 설정하기</button>
-              </div>
-            </div>
-          </div>
-          <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
-          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
-            <div class="my-page__card">
-              <p class="my-page__field-label">등록 이메일</p>
-              <div class="my-page__field">
-                <input class="my-page__input" />
                 <button class="my-page__btn my-page__btn--default" type="button">원페이에서 확인하기</button>
               </div>
             </div>
@@ -409,7 +414,7 @@
                 <input class="my-page__input" />
                 <button class="my-page__btn my-page__btn--default" type="button" disabled>닉네임 변경하기</button>
               </div>
-              <p class="my-page__card-message my-page__card-message--variant-1">닉네임은 30일에 한 번 변경할 수 있어요</p>
+              <p class="my-page__card-message my-page__card-message--variant-1">* 닉네임은 30일에 한 번 변경할 수 있어요</p>
               <p class="my-page__card-message my-page__card-message--variant-2">다음 변경 가능일 : 2026.08.29</p>
             </div>
           </div>
@@ -423,10 +428,10 @@
             </div>
             <div class="my-page__card">
               <p class="my-page__field-label">닉네임</p>
-              <div class="my-page__setting-name">
+              <div class="my-page__setting-name" style="margin-bottom: 20px">
                 <div class="my-page__field my-page__field--variant-1">
                   <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
-                  <span class="my-page__input-count">0/10</span>
+                  <span class="my-page__input-count"><span class="my-page__input-count-num is-count">8</span>/10</span>
                 </div>
                 <div class="my-page__field-message">한글, 영문, 숫자로 2~10자 이내로 입력해주세요</div>
                 <div class="my-page__card-btn-wrap">
@@ -434,14 +439,12 @@
                   <button class="my-page__btn my-page__btn--variant-1">저장</button>
                 </div>
               </div>
-            </div>
-            <div class="my-page__card">
               <div class="my-page__setting-name my-page__setting-name--warning">
                 <div class="my-page__field my-page__field--variant-1">
                   <input class="my-page__input" type="text" placeholder="닉네임을 입력해주세요" />
-                  <span class="my-page__input-count">0/10</span>
+                  <span class="my-page__input-count"><span class="my-page__input-count-num is-count">8</span>/10</span>
                 </div>
-                <div class="my-page__field-message">지금 사용 중인 닉네임과 같아요</div>
+                <div class="my-page__field-message">한글, 영문, 숫자만 사용할 수 있어요</div>
                 <div class="my-page__card-btn-wrap">
                   <button class="my-page__btn my-page__btn--variant-2">취소</button>
                   <button class="my-page__btn my-page__btn--variant-1">저장</button>
@@ -451,8 +454,8 @@
           </div>
           <h3 class="my-page__main-title">내활동</h3>
           <!-- my-page__main-contetnt 인라인 스타일 제거 해주세요 -->
-          <div class="my-page__main-contetnt" style="margin-bottom: 20px">
-            <p class="my-page__main-contetnt-title my-page__main-contetnt-title--comment">내가 작성한 댓글<span class="my-page__count">37개</span></p>
+          <div class="my-page__main-contetnt my-page__main-contetnt--comment" style="margin-bottom: 20px">
+            <p class="my-page__main-contetnt-title my-page__main-contetnt-title--comment">내가 작성한 댓글<span class="my-page__count">37</span>개</p>
             <div class="my-page__card my-page__card--comments">
               <p class="my-page__comment-date">2026.07.30</p>
               <div class="my-page__comments">
@@ -466,7 +469,7 @@
                       <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
                     </div>
                   </div>
-                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                  <button class="my-page__btn my-page__btn--variant-2 my-page__btn--small">삭제</button>
                 </div>
                 <div class="my-page__comment-item">
                   <div class="my-page__comment-info">
@@ -478,13 +481,13 @@
                       <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
                     </div>
                   </div>
-                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                  <button class="my-page__btn my-page__btn--variant-2 my-page__btn--small">삭제</button>
                 </div>
                 <div class="my-page__comment-item">
                   <div class="my-page__comment-info">
                     <div class="my-page__comment-article">이정후가 치면 안타다…'17경기 연속 안타' 韓빅리거 새 역사쓰다</div>
                     <div class="my-page__comment-reply">
-                      <span class="my-page__reply-user">s45612345님 댓글에 대한 답글:</span>
+                      <span class="my-page__reply-user">s45612345님 댓글에 대한 답글 :</span>
                       <span class="my-page__reply-message">미쳤다. 계획범죄 맞고 이건 공범 관계도 봐야함</span>
                     </div>
                     <div class="my-page__comment">이 정도면 진짜 역대급이다... 다음 경기도 기대됨</div>
@@ -494,7 +497,7 @@
                       <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
                     </div>
                   </div>
-                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                  <button class="my-page__btn my-page__btn--variant-2 my-page__btn--small">삭제</button>
                 </div>
               </div>
               <p class="my-page__comment-date">2026.07.30</p>
@@ -509,7 +512,7 @@
                       <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
                     </div>
                   </div>
-                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                  <button class="my-page__btn my-page__btn--variant-2 my-page__btn--small">삭제</button>
                 </div>
                 <div class="my-page__comment-item">
                   <div class="my-page__comment-info">
@@ -521,7 +524,7 @@
                       <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
                     </div>
                   </div>
-                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                  <button class="my-page__btn my-page__btn--variant-2 my-page__btn--small">삭제</button>
                 </div>
                 <div class="my-page__comment-item">
                   <div class="my-page__comment-info">
@@ -537,7 +540,7 @@
                       <a class="my-page__reply-count" href="javascript:void(0)">답글 2개</a>
                     </div>
                   </div>
-                  <button class="my-page__btn my-page__btn--variant-3">삭제</button>
+                  <button class="my-page__btn my-page__btn--variant-2 my-page__btn--small">삭제</button>
                 </div>
               </div>
             </div>
