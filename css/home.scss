@@ -1113,6 +1113,572 @@
         cursor: pointer;
       }
 
+      &--best-widget {
+        max-width: 620px;
+        grid-column: span 2;
+        $border: #e5e7eb;
+        $gray-50: #f9fafb;
+        $gray-100: #f3f4f6;
+        $text: #1f2937;
+        $text-sub: #6b7280;
+        $text-faint: #9ca3af;
+        $green: #03c75a;
+        $accent: #3a84ff; /* 포인트 컬러(기존 red 대체) */
+        $accent-dark: #1c64e0; /* 강조 텍스트/버튼 진한 톤 */
+        $accent-bg: #eaf2ff; /* 포인트 컬러 연한 배경 */
+        $orange: #f97316;
+        $purple: #8b5cf6;
+        $amber: #d97706;
+        $rising: #3a84ff; /* B안 '급상승' 배지 컬러(그린 → 블루로 재변경) */
+        $rising-bg: #eaf2ff;
+        $hot-red: #f24957;
+
+        .page {
+          max-width: 650px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 34px;
+        }
+
+        .widget {
+          width: 610px;
+          height: 310px;
+          background: #fff;
+          border: 1px solid $border;
+          border-radius: 10px;
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .widget-label {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 12px;
+          flex: none;
+        }
+
+        .widget-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          background: $accent;
+          color: #fff;
+          font-size: 11px;
+          font-weight: 700;
+          padding: 3px 8px;
+          border-radius: 5px;
+        }
+
+        .widget-badge.rising {
+          background: $rising;
+        }
+
+        .widget-title {
+          font-size: 15px;
+          font-weight: 700;
+          color: $text;
+        }
+
+        .widget-body {
+          flex: 1;
+          display: flex;
+          gap: 16px;
+          min-height: 0;
+        }
+
+        /* A/B 공통 좌측 기사 정보 */
+        .article-col {
+          width: 280px;
+          flex: none;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .article-thumb {
+          height: 112px;
+          border-radius: 8px;
+          margin-bottom: 8px;
+          position: relative;
+          overflow: hidden;
+          background: #e5e7eb;
+          flex: none;
+        }
+
+        .article-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .article-press {
+          font-size: 11px;
+          color: $text-faint;
+          margin: 0 0 4px;
+          flex: none;
+        }
+
+        .article-title {
+          font-size: 20px;
+          font-weight: 800;
+          line-height: 1.3;
+          margin: 0;
+          color: $text;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          flex: none;
+        }
+
+        .talk-count {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 12px;
+          color: $accent-dark;
+          font-weight: 700;
+          background: $accent-bg;
+          padding: 5px 10px;
+          border-radius: 14px;
+          width: fit-content;
+          margin-top: auto; /* 우측 버튼/리스트 하단과 높이를 맞추기 위한 정렬 */
+        }
+
+        .comment-col {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+        }
+        .comment-heading {
+          font-size: 12px;
+          font-weight: 700;
+          color: $text-sub;
+          margin: 0 0 8px;
+          flex: none;
+        }
+        .comment-viewport {
+          height: 182px;
+          overflow: hidden;
+          position: relative;
+          flex: none;
+        }
+        .comment-track {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          animation: commentPush 16s steps(8) infinite;
+        }
+        .comment-viewport:hover .comment-track {
+          animation-play-state: paused;
+        }
+        @keyframes commentPush {
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(-208px);
+          }
+        }
+        .comment-line,
+        .comment-reply {
+          height: 18px;
+          box-sizing: border-box;
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .comment-line {
+          font-size: 12.5px;
+        }
+        .comment-line .nick {
+          flex: none;
+          font-weight: 700;
+          color: $text;
+        }
+        .comment-line .nick.hot {
+          color: $hot-red;
+        } /* 🔥 좋아요 10개 이상 */
+        .comment-line .nick.crown {
+          color: $purple;
+        } /* 👑 답글이 등록된 댓글(부모) */
+        .comment-line .txt {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: $text;
+        }
+        .comment-reply {
+          font-size: 11.5px;
+          gap: 5px;
+          margin-left: 15px;
+        }
+        .comment-reply .arrow {
+          flex: none;
+          color: $text-faint;
+        }
+        .comment-reply .nick {
+          flex: none;
+          font-weight: 700;
+          color: $text-sub;
+        }
+        .comment-reply .nick.hot {
+          color: $hot-red;
+        }
+        .comment-reply .txt {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: $text-sub;
+        }
+        .cta-btn {
+          margin-top: auto;
+          align-self: flex-end;
+          flex: none;
+          font-size: 12px;
+          font-weight: 700;
+          color: #fff;
+          background: $accent;
+          padding: 7px 14px;
+          border-radius: 16px;
+          cursor: pointer;
+          border: none;
+        }
+
+        .press-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          margin: 0 0 4px;
+          flex: none;
+        }
+
+        .press-row .article-press {
+          margin: 0;
+        }
+
+        .press-row .talk-count {
+          margin-top: 0;
+          flex: none;
+        }
+
+        .pin-bottom {
+          margin-top: auto;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .pin-comment-viewport {
+          height: 18px;
+          overflow: hidden;
+          flex: none;
+        }
+
+        .pin-comment-track {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          animation: pinCommentPush 8s steps(4) infinite;
+        }
+
+        .pin-comment-viewport:hover .pin-comment-track {
+          animation-play-state: paused;
+        }
+
+        @keyframes pinCommentPush {
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(-104px);
+          }
+        }
+
+        .rank-list {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          min-width: 0;
+          justify-content: space-between;
+        }
+
+        .rank-row {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          cursor: pointer;
+          padding: 2px;
+          border-radius: 6px;
+        }
+
+        .rank-row:hover {
+          background: $gray-50;
+        }
+
+        .rank-num {
+          width: 17px;
+          font-size: 13px;
+          font-weight: 700;
+          color: $text-faint;
+          flex: none;
+        }
+
+        .rank-thumb {
+          width: 44px;
+          height: 44px;
+          border-radius: 7px;
+          flex: none;
+          overflow: hidden;
+          background: $gray-100;
+        }
+
+        .rank-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .rank-body {
+          min-width: 0;
+          flex: 1;
+        }
+
+        .rank-title {
+          font-size: 13.5px;
+          font-weight: 600;
+          margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .rank-meta {
+          font-size: 12px;
+          color: $text-sub;
+          margin: 2px 0 0;
+        }
+
+        .rank-meta .up {
+          color: $rising;
+          font-weight: 700;
+        }
+
+        .widget-sub {
+          font-size: 11.5px;
+          color: $text-faint;
+          margin: -6px 0 10px;
+        }
+
+        .live-dot {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: $accent;
+          flex: none;
+          animation: pulse 1.3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.3;
+          }
+        }
+
+        .ticker-wrap {
+          flex: 1;
+          display: flex;
+          gap: 12px;
+          min-width: 0;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .ticker-wrap::before,
+        .ticker-wrap::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 22px;
+          z-index: 2;
+          pointer-events: none;
+        }
+
+        .ticker-wrap::before {
+          top: 0;
+          background: linear-gradient(#fff, rgba(255, 255, 255, 0));
+        }
+
+        .ticker-wrap::after {
+          bottom: 0;
+          background: linear-gradient(rgba(255, 255, 255, 0), #fff);
+        }
+
+        .ticker-col {
+          flex: 1;
+          overflow: hidden;
+          min-width: 0;
+        }
+
+        .ticker-track {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          animation: scrollUp 26s linear infinite;
+        }
+
+        .ticker-track.slow {
+          animation-duration: 30s;
+        }
+
+        .ticker-track.slower {
+          animation-duration: 42s;
+        } /* D안 우측 전용: C안보다 더 느리게 */
+
+        .ticker-col:hover .ticker-track {
+          animation-play-state: paused;
+        }
+
+        @keyframes scrollUp {
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(-50%);
+          }
+        }
+
+        .ticker-item {
+          display: flex;
+          gap: 10px;
+          align-items: flex-start;
+          cursor: pointer;
+          padding: 4px;
+          border-radius: 8px;
+        }
+
+        .ticker-item:hover {
+          background: $gray-50;
+        }
+
+        .ticker-thumb {
+          width: 60px;
+          height: 74px;
+          border-radius: 10px;
+          flex: none;
+          overflow: hidden;
+          background: $gray-100;
+        }
+
+        .ticker-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .ticker-body {
+          min-width: 0;
+          flex: 1;
+          padding-top: 2px;
+        }
+
+        .ticker-toprow {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 7px;
+        }
+
+        .ticker-tag {
+          display: inline-block;
+          font-size: 11px;
+          font-weight: 700;
+          color: $accent-dark;
+          background: $accent-bg;
+          padding: 2px 7px;
+          border-radius: 5px;
+          flex: 1;
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .ticker-count {
+          display: inline-flex;
+          align-items: center;
+          gap: 3px;
+          flex: none;
+          white-space: nowrap;
+          font-size: 12px;
+          font-weight: 800;
+          color: $accent-dark;
+        }
+
+        .ticker-count-icon {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          flex: none;
+          background-color: $accent-dark;
+          -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABRRJREFUeAHtm11OGzEQx4dPqRIf6RsSH90bND1BwwlKT9BwAuAEkBMAJ2g4AfQEhBOwPUGXwANvpcBDKwTpf4qpEseb2F574yD/pIjNJGid/86MveNZokgkEolEIpFIJBJ5lUxQQCTg4eGhMjExUZE/m56ezhgaISMTqwLm5+drnU6nNjk5+RGmhM0a/5o+PT2dQdDW3d1d6wZQSZQu1srKSg0/dBevKumJMxCI3cTr6OrqqkWeKU2sLpFq5IcMojUuLy+b5AnvYi0vL1cRZvseReoBgp0g7+1cX19n5BivYq2trW3jz77GV28g5gV+aIrjjN/j+F8uEsmeXwmOE9g/kh477Xb7gBziRSyRvI+HeBOLcQSvO8HfFBOddqLGpFlDkq/j8GViUAJhDxCWO+QI52ItLS0ls7Ozp5T/IzK8DiFS00SgPFZXV+ucCwecL729vV13MWs6FWuIUDxYFunAhUgyCPk9/NnN+diJYM7EGiJUCpE++15U8qIW4akcA0KyhZBcpwJMkiMg1DGpB8l5ab2M1Tefg8+Fw1T+jPMnQlZnssnFiWchBNj992Q7rnIDi8U9Khk4WEV4WFX+DPZ12wVsYbF4sYmreUr9gzrEoLZpRAwQLEP++mCTvwqHIYT6qjCnoxSK4UmE8yQ9TyzdJHNzc1ZjKyQWT9vUn6cyMciRwzkMOXNTtmN8WzwhkSGFxBLrmx74/mzUpZRuMAOecIVCMldQ8qmTIdZi5XmVzxtZWyCW0rv4ToMMsBZL5VVIqJsUIOzpKu9aWFiokwFWYnElgRReVUZNyRaI1ZBtSBmfyAArsaampurUf+IGBQycq0XSzMgFSJNQtA3DvjIJBGxR+BxJ7ytYRlRJE2OxeLFH0kIPXnUW0gyYh6iX9YBE708sUtxCqAYRIjne/540MRbr8fExkW2KmSZIcrz/LWliLBaXdmXbSwl4TLiQ3r8jTWzCULkBSuOL19mw8F7fuOKs+DeuIIVc6H7XRqxxyk8qtHOUjCuxxiI0xW1aD5iwfpAmxmLBbTPZhuWE9sJulMzMzKgu6nfSxFgsVBb6FqAQcCzEwtg3FDbtBbWxWLg6GUmhKFqGggch17dav7+/9ycW17ZxUvkEVdNCWtlwGZl7wSRzarJxYbV04Btn2Wa7CVAWiIiawvyNDLASi/sUFLYtChhVZVf1OwZhJVZemZb3EClAVPsFNmUl6xU8TtbnwqqrFwI542qSIdZiCReWy7S10BK9aC1IJLPVLtQUWYJJ5Pfi4uIbHNa67Uikf7A93qIA4BkQBb8T2Y6o2MEYjQuWhW6kRdeebAsi0Xe1QMmktnubhcRCfkxDTfR5LVBFWgsKl2i4W0a2jTrRY/bjZhVVu1Gh1gJX/Vk/qbfycNNut7Vr264Y1PjrogXKSfFPcftT+ozIOQrb8ec5HdIpSt97VJBCYvGVhMsfq+65qES43x456pzU/ayZ6GctXLScJksGNdzyg0hUAqLrkPtE80pETht/rcSCN23A3TmJqsItg8sfkCfYm7n7hZs6Bj2UgM+4L2vTZRu5cYLPa7YVZD46k0XL9gY/iiIEGpYTnT+KwmiLJWYafmCpPuBrqcsNV7Ghmxj8C4cde5OXnKktFkKvicF/oTDhC9Tw4U3daIuF8OtQeGT0/LCUl0dcZEwSPLt2CBsT/58mEw1qpaEtFucCJFnl/ZYnWJRfCP1MbL9xPmr5ykeRSCQSiUQikUjktfEXtHwWq4gjESIAAAAASUVORK5CYII=');
+          mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAYAAAA4TnrqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABRRJREFUeAHtm11OGzEQx4dPqRIf6RsSH90bND1BwwlKT9BwAuAEkBMAJ2g4AfQEhBOwPUGXwANvpcBDKwTpf4qpEseb2F574yD/pIjNJGid/86MveNZokgkEolEIpFIJBJ5lUxQQCTg4eGhMjExUZE/m56ezhgaISMTqwLm5+drnU6nNjk5+RGmhM0a/5o+PT2dQdDW3d1d6wZQSZQu1srKSg0/dBevKumJMxCI3cTr6OrqqkWeKU2sLpFq5IcMojUuLy+b5AnvYi0vL1cRZvseReoBgp0g7+1cX19n5BivYq2trW3jz77GV28g5gV+aIrjjN/j+F8uEsmeXwmOE9g/kh477Xb7gBziRSyRvI+HeBOLcQSvO8HfFBOddqLGpFlDkq/j8GViUAJhDxCWO+QI52ItLS0ls7Ozp5T/IzK8DiFS00SgPFZXV+ucCwecL729vV13MWs6FWuIUDxYFunAhUgyCPk9/NnN+diJYM7EGiJUCpE++15U8qIW4akcA0KyhZBcpwJMkiMg1DGpB8l5ab2M1Tefg8+Fw1T+jPMnQlZnssnFiWchBNj992Q7rnIDi8U9Khk4WEV4WFX+DPZ12wVsYbF4sYmreUr9gzrEoLZpRAwQLEP++mCTvwqHIYT6qjCnoxSK4UmE8yQ9TyzdJHNzc1ZjKyQWT9vUn6cyMciRwzkMOXNTtmN8WzwhkSGFxBLrmx74/mzUpZRuMAOecIVCMldQ8qmTIdZi5XmVzxtZWyCW0rv4ToMMsBZL5VVIqJsUIOzpKu9aWFiokwFWYnElgRReVUZNyRaI1ZBtSBmfyAArsaampurUf+IGBQycq0XSzMgFSJNQtA3DvjIJBGxR+BxJ7ytYRlRJE2OxeLFH0kIPXnUW0gyYh6iX9YBE708sUtxCqAYRIjne/540MRbr8fExkW2KmSZIcrz/LWliLBaXdmXbSwl4TLiQ3r8jTWzCULkBSuOL19mw8F7fuOKs+DeuIIVc6H7XRqxxyk8qtHOUjCuxxiI0xW1aD5iwfpAmxmLBbTPZhuWE9sJulMzMzKgu6nfSxFgsVBb6FqAQcCzEwtg3FDbtBbWxWLg6GUmhKFqGggch17dav7+/9ycW17ZxUvkEVdNCWtlwGZl7wSRzarJxYbV04Btn2Wa7CVAWiIiawvyNDLASi/sUFLYtChhVZVf1OwZhJVZemZb3EClAVPsFNmUl6xU8TtbnwqqrFwI542qSIdZiCReWy7S10BK9aC1IJLPVLtQUWYJJ5Pfi4uIbHNa67Uikf7A93qIA4BkQBb8T2Y6o2MEYjQuWhW6kRdeebAsi0Xe1QMmktnubhcRCfkxDTfR5LVBFWgsKl2i4W0a2jTrRY/bjZhVVu1Gh1gJX/Vk/qbfycNNut7Vr264Y1PjrogXKSfFPcftT+ozIOQrb8ec5HdIpSt97VJBCYvGVhMsfq+65qES43x456pzU/ayZ6GctXLScJksGNdzyg0hUAqLrkPtE80pETht/rcSCN23A3TmJqsItg8sfkCfYm7n7hZs6Bj2UgM+4L2vTZRu5cYLPa7YVZD46k0XL9gY/iiIEGpYTnT+KwmiLJWYafmCpPuBrqcsNV7Ghmxj8C4cde5OXnKktFkKvicF/oTDhC9Tw4U3daIuF8OtQeGT0/LCUl0dcZEwSPLt2CBsT/58mEw1qpaEtFucCJFnl/ZYnWJRfCP1MbL9xPmr5ykeRSCQSiUQikUjktfEXtHwWq4gjESIAAAAASUVORK5CYII=');
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+        }
+
+        .ticker-textrow {
+          display: flex;
+          align-items: flex-end;
+          gap: 6px;
+        }
+
+        .ticker-text {
+          flex: 1;
+          min-width: 0;
+          margin: 0;
+          font-size: 13px;
+          line-height: 1.3;
+          color: $text;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .ticker-text .nick {
+          font-weight: 700;
+          color: $text-sub;
+          margin-right: 4px;
+        }
+
+        .ticker-time {
+          font-size: 11px;
+          color: $text-faint;
+          flex: none;
+          white-space: nowrap;
+          padding-bottom: 1px;
+        }
+      }
+
       &--economy {
         position: relative;
         padding: 14px 13px 13px 15px;
